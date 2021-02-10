@@ -18,6 +18,7 @@ export default {
 <style>
 :root {
   --primary-color: #953036;
+  --secondary-bg: rgb(71, 71, 71); 
 }
 * {
   box-sizing: border-box;
@@ -25,7 +26,6 @@ export default {
   padding: 0;
 }
 body {
-  background: var(--primary-color);
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
   line-height: 1.6;
@@ -36,13 +36,6 @@ a {
 }
 ul {
   list-style: none;
-}
-.body-bg-no-image {
-  background: var(--primary-color);
-}
-.body-bg-image {
-  background: var(--primary-color) url("./assets/octane.png") no-repeat top
-    center;
 }
 .container {
   max-width: 960px;
@@ -77,10 +70,5 @@ textarea {
   cursor: pointer;
   outline: none;
   margin-top: 1rem;
-}
-@media (max-width: 700px) {
-  body {
-    background: var(--primary-color);
-  }
 }
 </style>

@@ -1,13 +1,11 @@
 <template>
-  <section class="search">
+    <section class="search">
     <h1>Track Player Stats:</h1>
     <form v-on:submit.prevent="onSubmit">
       <div class="form-group">
         <label for="platform">Platform</label>
         <select name="Platform" id="platform" v-model="platform">
-          <option value="psn">Playstation</option>
-          <option value="xbl">Xbox</option>
-          <option value="Origin">Origin</option>
+          <option value="steam">Steam</option>
         </select>
       </div>
       <div class="form-group">
@@ -17,7 +15,7 @@
           name
           v-model="gamertag"
           id="gamertag"
-          placeholder="Origin ID, Xbox Live GamerTag, etc"
+          placeholder="User's handle on Steam: Enter Steam ID, Community URL or Vanity Username"
         />
       </div>
       <div class="form-group">
@@ -54,21 +52,15 @@ export default {
 };
 </script>
 
-<style>
-body {
-  background: var(--primary-color);
-}
-.body-bg-no-image {
-  background: var(--primary-color);
+<style scoped>
+  body{
+    background: var(--secondary-bg);
+  }
+  .body-bg-no-image {
+  background: var(--secondary-bg);
 }
 .body-bg-image {
-  background: var(--primary-color) url("../assets/octane.png") no-repeat top
+  background: var(--secondary-bg) url("../assets/csgo-bg-image.png") no-repeat top
     center;
-}
-
-@media (max-width: 700px) {
-  body {
-    background: var(--primary-color);
-  }
 }
 </style>
